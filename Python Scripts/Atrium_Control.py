@@ -25,7 +25,7 @@ def runCharge(ID_CARD_NUMBER, TOTAL, DESCRIPTION):
     Amount.send_keys(TOTAL)
     Description = driver.find_element(By.NAME, "transaction_description")
     Description.send_keys(DESCRIPTION)
-    time.sleep(20)
+    time.sleep(30)
     driver.quit()
 if __name__ == "__main__":
     runCharge(sys.argv[1], sys.argv[2], sys.argv[3])
