@@ -5,10 +5,12 @@ import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+import chromedriver_autoinstaller
 
 
 def runCharge(ID_CARD_NUMBER, TOTAL, DESCRIPTION):
-    driver = webdriver.Edge()
+    chromedriver_autoinstaller.install()
+    driver = webdriver.Chrome()
     
     driver.get('https://awrbyu.atriumcampus.com/mechanicalengineering/dashboard')
     username = WebDriverWait(driver, timeout=10).until(lambda d: d.find_element(By.ID, "name"))
