@@ -18,3 +18,8 @@
 
 # PDFs
 *.pdf
+
+# Photos
+*.png
+*.jpg
+*.jpeg
