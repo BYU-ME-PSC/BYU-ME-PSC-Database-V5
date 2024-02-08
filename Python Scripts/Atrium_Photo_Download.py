@@ -25,7 +25,7 @@ def getPhoto(ID_CARD_NUMBER):
     ID.send_keys(ID_CARD_NUMBER)
     Amount = driver.find_element(By.NAME, "transaction_amount")
     Amount.clear()
-    time.sleep(1)
+    time.sleep(3)
     with open('temp.png', 'wb') as file:
         HTML = driver.find_element(By.XPATH, '//img[@class="user_photo"]').get_property('outerHTML')
         Photo = driver.find_element(By.XPATH, '//img[@class="user_photo"]')
