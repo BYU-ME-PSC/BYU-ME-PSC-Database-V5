@@ -13,7 +13,7 @@ def getPhoto(ID_CARD_NUMBER):
     chromedriver_autoinstaller.install()
     driver = webdriver.Chrome()
     
-    driver.get('https://awrbyu.atriumcampus.com/mechanicalengineering/dashboard')
+    driver.get('https://awrbyu.atriumcampus.com/mechanicalengineering-projectsupportcenter')
     username = WebDriverWait(driver, timeout=10).until(lambda d: d.find_element(By.ID, "name"))
     username.send_keys("ksc")
     password = driver.find_element(By.ID, "password")
