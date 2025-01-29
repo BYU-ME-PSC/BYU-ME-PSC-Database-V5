@@ -24,6 +24,7 @@ def runCharge(ID_CARD_NUMBER, TOTAL, DESCRIPTION):
     add_button = driver.find_element(By.ID, "add_misc_product")
     driver.execute_script("window.scrollTo(0,1000)")
     Description = driver.find_element(By.NAME, "misc_product_name")
+    if(DESCRIPTION==''): DESCRIPTION = 'Item'
     Description.send_keys(DESCRIPTION)
     Amount = driver.find_element(By.NAME, "misc_product_amount")
     Amount.clear()
